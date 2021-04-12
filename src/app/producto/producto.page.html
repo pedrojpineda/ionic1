@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="1" size-xs="2">
+          <ion-back-button></ion-back-button>
+        </ion-col>
+        <ion-col size="11" size-xs="10">
+            <h1>{{producto.titulo}}</h1>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="3" size-sm="12" size-xs="12">
+          <ion-img src="assets/images/items/{{producto.imagen}}"></ion-img>
+        </ion-col>
+        <ion-col size-md="9" size-sm="12" size-xs="12">
+          <ion-card-header>
+            <ion-card-title><h2>{{producto.titulo}}</h2></ion-card-title>
+            <ion-card-subtitle>${{producto.precio}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text><p>{{producto.descripcion}}</p></ion-text>
+            <ion-button (click)="agregarCarrito(producto)" color="danger" strong="true">Agregar al
+              carrito
+            </ion-button>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
